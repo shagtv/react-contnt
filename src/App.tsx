@@ -6,7 +6,7 @@ function App() {
   const [todo, setTodo] = useState("");
 
     useEffect(() => {
-        fetch('https://shagtv.up.railway.app/api/content')
+        fetch(`${process.env.REACT_APP_API_HOST}/api/content`)
             .then(response => response.json())
             .then(json => console.log(json))
             .catch(error => console.error(error));
